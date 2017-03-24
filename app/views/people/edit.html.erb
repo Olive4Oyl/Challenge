@@ -36,7 +36,7 @@
               <div class="ui buttons">
                 <%= f.submit 'Update', class: 'ui button' %>
                <div class="or"></div>
-                 <%= button_to  'Back', people_path, method: :get, class: 'ui positive button' %>
+                <input type="button" value="Back" class="ui positive button" button onclick="window.location.href='/people'" />
               </div>
 
           <% end %>

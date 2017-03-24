@@ -5,6 +5,8 @@ $(function() {
 
 });
 
+
+//for the index page
 function newPeople() {
 
 	if ($('.people.index').length){
@@ -31,7 +33,7 @@ function Person(attr) {
 
 Person.prototype.toHTML = function(){
   var id = this.id
-  var Edit = '<a class="ui button" href="people/' + id + "/edit" + '">' +  "Edit" + "</a><br>"
+  var Edit = '<a class="ui button" href="people/' + id + "/edit" + '">' +  "Edit" + "</a><br>" 
   var Profile = '<a class="ui positive button" href="people/' + id + '">' +  "Profile" + "</a><br>"
 
   return [
@@ -40,10 +42,11 @@ Person.prototype.toHTML = function(){
    "</strong></br>", 
    "<strong><h5>",
     "Favorite City: " + this.favoriteCity + "</h5>",
-    Edit + Profile
+    Edit + "</br>" + Profile
   ].join("")
 }
 
+//for the people show page
 function showPeople(){
 	if($('.people.show').length) {
 		$.ajax({
