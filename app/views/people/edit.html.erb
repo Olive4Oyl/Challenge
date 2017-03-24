@@ -26,20 +26,19 @@
       <div class="event">
         <div class="content">
           <div class="ui form">
-          <%= form_for @people do |f| %>
+            <%= form_for @people do |f| %>
               <strong><%= f.label :name %></strong><br>
-              <%= f.text_field :name %><br><br>
+                <%= f.text_field :name %><br><br>
 
               <strong><%= f.label :favoriteCity, 'Favorite City' %></strong><br>
-              <%= f.text_field :favoriteCity %><br><br>
+                <%= f.text_field :favoriteCity %><br><br>
 
               <div class="ui buttons">
-                <%= f.submit 'Update', class: 'ui button' %>
-               <div class="or"></div>
-                <input type="button" value="Back" class="ui positive button" button onclick="window.location.href='/people'" />
+                  <%= f.submit 'Update', class: 'ui button' %>
+                <div class="or"></div>
+                  <input type="button" value="Back" class="ui positive button backButton"/>
               </div>
-
-          <% end %>
+            <% end %>
           </div>
         </div>
       </div>

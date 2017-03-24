@@ -1,21 +1,20 @@
 $(function() {
 
 	newPeople();
-	showPeople();
 
 });
 
 
-//for the index page
 function newPeople() {
 
 	if ($('.people.index').length){
 
 		$.ajax({
-			url: "/people",
+			url: "/people.json",
 			method: "GET",
 			dataType: "json",
 		}).done(function(response) {
+			debugger;
 			response.forEach(function(people_attr) {
 				var person = new Person(people_attr)
 				var html = person.toHTML()
@@ -37,28 +36,17 @@ Person.prototype.toHTML = function(){
   var Profile = '<a class="ui positive button" href="people/' + id + '">' +  "Profile" + "</a><br>"
 
   return [
+  "__________________________________________" + "</br>",
    "<br><strong><h5>",
      "Name: " + this.name + "</h5>",
    "</strong></br>", 
    "<strong><h5>",
     "Favorite City: " + this.favoriteCity + "</h5>",
-    Edit + "</br>" + Profile
+    Edit + "</br>" + Profile + "</br>",
   ].join("")
 }
 
-//for the people show page
-function showPeople(){
-	if($('.people.show').length) {
-		$.ajax({
-			url: this.location.pathname,
-			method: "GET",
-			dataType: "json",
-		}).done(function(response){
-			var string = "<h5>" + "Name: " + response.name + "<br>" + "<br>" + "Favorite City: " + response.favoriteCity + "</h5>" 
-			$('.summary').prepend(string)
-		});
-	}
-}
+
 
 
 
