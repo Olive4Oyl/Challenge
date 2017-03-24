@@ -1,7 +1,23 @@
-<div class="show_container">
-	
+<div  class="ui card" id="address_card">
+  <div class="content">
+    <div class="header">Contacts 
+    </div>
+  </div>
+  <div class="content">
+    <h4 class="ui sub header">
+		Profile Page
+	</h4></br>
+    <div class="ui small feed">
+      <div class="event">
+        <div class="content">
+          <div class="summary">
+          	<%= button_to 'Delete Contact', person_path(@people), method: :delete %>
+
+			<%= button_to  'Back', people_path, method: :get %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-<%= button_to 'Delete Contact', person_path(@people), method: :delete %>
-
-<%= button_to  'Back', people_path, method: :get %>

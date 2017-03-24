@@ -1,34 +1,22 @@
-<h1> Contacts </h1>
-<%= link_to new_person_path, :class => 'logo' do %>
-    <i class="material-icons">add_circle_outline</i> 
-<%end%>
-<br>
-
-<div class="index_body">
-
-
-
-
-</div>
-
-<div class="ui cards">
-  <div class="card">
-    <div class="content">
-      <img class="right floated mini ui image" src="/images/avatar/large/elliot.jpg">
-      <div class="header">
-        Elliot Fu
-      </div>
-      <div class="meta">
-        Friends of Veronika
-      </div>
-      <div class="description">
-        Elliot requested permission to view your contact details
-      </div>
+<div  class="ui card" id="address_card">
+  <div class="content">
+    <div class="header">Contacts 
     </div>
-    <div class="extra content">
-      <div class="ui two buttons">
-        <div class="ui basic green button">Approve</div>
-        <div class="ui basic red button">Decline</div>
+  </div>
+  <div class="content">
+    <h4 class="ui sub header">
+    	<%= link_to new_person_path, :class => 'logo' do %>
+    	<i class="add user icon"></i>
+		<%end%>
+		Add a Contact 
+	</h4>
+    <div class="ui small feed">
+      <div class="event">
+        <div class="content">
+          <div class="summary">
+          </div>
+        </div>
       </div>
     </div>
   </div>
+</div>

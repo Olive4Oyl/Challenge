@@ -17,7 +17,7 @@ function newPeople() {
 			response.forEach(function(people_attr) {
 				var person = new Person(people_attr)
 				var html = person.toHTML()
-				$('.index_body').append(html);
+				$('.summary').append(html);
 			})
 		})
 	}
@@ -36,10 +36,10 @@ Person.prototype.toHTML = function(){
 
   return [
    "<br><strong>",
-     this.name,
+     "Name: " + this.name,
    "</strong></br>", 
    "<strong>",
-     this.favoriteCity,
+     "Favorite City: " + this.favoriteCity,
 	"<br>" + Edit + Profile
   ].join("")
 }
@@ -51,8 +51,8 @@ function showPeople(){
 			method: "GET",
 			dataType: "json",
 		}).done(function(response){
-			var string = "<h2>" + response.name + "<br>" + response.favoriteCity + "</h2>" 
-			$('.show_container').prepend(string)
+			var string = "<h3>" + "Name: " + response.name + "<br>" + "Favorite City: " + response.favoriteCity + "</h3>" 
+			$('.summary').prepend(string)
 		});
 	}
 }

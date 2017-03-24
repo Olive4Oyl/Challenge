@@ -4,9 +4,23 @@
 
 .logo {
 	color: black;
-	font-size: 35px;
+	font-size: 15px;
 }
 
 .logo:link {
 	text-decoration: none;
 }
+
+.content{
+    margin: auto;
+}
+
+#address_card {
+	margin: auto;
+	margin-top: 100px;
+}
+
+.header, .ui.sub.header, .summary {
+	text-align: center;
+}
+
