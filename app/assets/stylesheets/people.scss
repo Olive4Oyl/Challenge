@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+//semantic ui add person logo//
 .logo {
 	color: black;
 	font-size: 15px;
@@ -11,10 +12,12 @@
 	text-decoration: none;
 }
 
+//semantic ui content//
 .content{
     margin: auto;
 }
 
+//overall card//
 #address_card {
 	margin: auto;
 	margin-top: 100px;
@@ -22,5 +25,25 @@
 
 .header, .ui.sub.header, .summary {
 	text-align: center;
+}
+
+//for the both buttons//
+.ui.buttons{
+	padding-left: 50px;
+}
+
+//for the delete button//
+#delete_buttons {
+	padding-left: 20px;
+}
+
+//for the main header//
+#header_content{
+	border-bottom: solid 1px;
+}
+
+//for the add button//
+#add_button{
+	padding-left: 60px;
 }
 

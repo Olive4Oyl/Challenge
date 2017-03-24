@@ -17,7 +17,7 @@ function newPeople() {
 			response.forEach(function(people_attr) {
 				var person = new Person(people_attr)
 				var html = person.toHTML()
-				$('.summary').append(html);
+				$('#summary').append(html);
 			})
 		})
 	}
@@ -31,16 +31,16 @@ function Person(attr) {
 
 Person.prototype.toHTML = function(){
   var id = this.id
-  var Edit = '<a class="show-link" href="people/' + id + "/edit" + '">' +  "Edit" + "</a><br>"
-  var Profile = '<a class="show-link" href="people/' + id + '">' +  "Profile" + "</a><br>"
+  var Edit = '<a class="ui button" href="people/' + id + "/edit" + '">' +  "Edit" + "</a><br>"
+  var Profile = '<a class="ui positive button" href="people/' + id + '">' +  "Profile" + "</a><br>"
 
   return [
-   "<br><strong>",
-     "Name: " + this.name,
+   "<br><strong><h5>",
+     "Name: " + this.name + "</h5>",
    "</strong></br>", 
-   "<strong>",
-     "Favorite City: " + this.favoriteCity,
-	"<br>" + Edit + Profile
+   "<strong><h5>",
+    "Favorite City: " + this.favoriteCity + "</h5>",
+    Edit + Profile
   ].join("")
 }
 
@@ -51,11 +51,12 @@ function showPeople(){
 			method: "GET",
 			dataType: "json",
 		}).done(function(response){
-			var string = "<h3>" + "Name: " + response.name + "<br>" + "Favorite City: " + response.favoriteCity + "</h3>" 
+			var string = "<h5>" + "Name: " + response.name + "<br>" + "<br>" + "Favorite City: " + response.favoriteCity + "</h5>" 
 			$('.summary').prepend(string)
 		});
 	}
 }
+
 
 
 

@@ -1,7 +1,7 @@
 <div  class="ui card" id="address_card">
-  <div class="content">
-    <div class="header">Contacts 
-    </div>
+  <div class="content" id="header_content">
+    <h3><div class="header">Contacts 
+    </div></h3>
   </div>
   <div class="content">
     <h4 class="ui sub header">
@@ -11,9 +11,18 @@
       <div class="event">
         <div class="content">
           <div class="summary">
-          	<%= button_to 'Delete Contact', person_path(@people), method: :delete %>
+            <div class="ui buttons" id="delete_buttons">
 
-			<%= button_to  'Back', people_path, method: :get %>
+				<%= link_to "Delete", person_path(@people), method: :delete, :class => 'ui button' %>
+   
+                 <div class="or"></div>
+
+                	<input type="button" value="Back" class="ui positive button" button onclick="window.location.href='/people'" />
+            </div>
+
+       <!--    	<%= button_to 'Delete Contact', person_path(@people), method: :delete %>
+
+			<%= button_to  'Back', people_path, method: :get %> -->
           </div>
         </div>
       </div>

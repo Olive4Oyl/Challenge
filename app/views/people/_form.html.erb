@@ -14,9 +14,9 @@
 <% end %>
 
 <div  class="ui card" id="address_card">
-  <div class="content">
-    <div class="header">Contacts 
-    </div>
+  <div class="content" id="header_content">
+    <h3><div class="header">Contacts 
+    </div></h3>
   </div>
   <div class="content">
     <h4 class="ui sub header">
@@ -25,17 +25,19 @@
     <div class="ui small feed">
       <div class="event">
         <div class="content">
-          <div class="summary">
+          <div class="ui form">
           <%= form_for @people do |f| %>
-            <%= f.label :name %><br>
+            <strong><%= f.label :name %></strong><br>
             <%= f.text_field :name %><br><br>
 
-            <%= f.label :favoriteCity, 'Favorite City' %><br>
+            <strong><%= f.label :favoriteCity, 'Favorite City' %></strong><br>
             <%= f.text_field :favoriteCity %><br><br>
-
-            <%= f.submit 'Add' %>
-          <% end %></br>
-          <%= button_to  'Back', people_path, method: :get %>
+            <div class="ui buttons" id="add_button">
+                <%= f.submit 'Add', class: 'ui button' %>
+                 <div class="or"></div>
+                <input type="button" value="Back" class="ui positive button" button onclick="window.location.href='/people'" />
+            </div>
+          <%end%>
           </div>
         </div>
       </div>

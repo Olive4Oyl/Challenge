@@ -1,19 +1,19 @@
 <div  class="ui card" id="address_card">
-  <div class="content">
-    <div class="header">Contacts 
-    </div>
+  <div class="content" id="header_content">
+    <h3><div class="header" >Contacts 
+    </div></h3>
   </div>
   <div class="content">
     <h4 class="ui sub header">
     	<%= link_to new_person_path, :class => 'logo' do %>
     	<i class="add user icon"></i>
+    		Add Contact
 		<%end%>
-		Add a Contact 
 	</h4>
     <div class="ui small feed">
       <div class="event">
         <div class="content">
-          <div class="summary">
+          <div class="summary" id="summary">
           </div>
         </div>
       </div>
