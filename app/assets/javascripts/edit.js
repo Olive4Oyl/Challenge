@@ -8,6 +8,6 @@ $(function() {
 
 function backButton(){
 	$(".backButton").on("click", function(){
-		history.go(-1);
+		location.href = "https://shrouded-shore-47899.herokuapp.com/people";
 	});
 }

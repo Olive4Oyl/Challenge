@@ -1,15 +1,18 @@
 <% if @people.errors.any? %>
   <div id="error_explanation">
-    <h2>
-      <%= pluralize(@people.errors.count, "error") %>
-      prohibited this person from being saved:
-    </h2>
- 
-    <ul>
-    <% @people.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
+    <div class="ui warning message">
+      <div class="header">
+        <h2>
+          <%= pluralize(@people.errors.count, "error") %>
+          prohibited this person from being saved:
+        </h2>
+      </div>
+        <ul id="warning">
+          <% @people.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+    </div>
   </div>
 <% end %>
 
