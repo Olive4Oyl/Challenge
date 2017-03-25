@@ -3,6 +3,7 @@ class PeopleController < ApplicationController
 
 	def index
 		@people = Person.all 
+	
 		respond_to do |format|
 			format.html { render :index }
 			format.json { render json: @people }
@@ -15,16 +16,18 @@ class PeopleController < ApplicationController
 
 	def create
 		@people = Person.new(people_params)
-
+		binding.pry
 		if @people.valid?
+			binding.pry
 			@people.save
-			redirect_to people_path
+			redirect_to people_path(@people)
 		else
 			render :new
 		end
 	end
 
 	def show
+		binding.pry
 		respond_to do |format|
 			format.html { render :show }
 			format.json { render json: @people }

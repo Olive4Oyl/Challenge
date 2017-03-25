@@ -8,13 +8,14 @@ $(function() {
 function newPeople() {
 
 	if ($('.people.index').length){
-
 		$.ajax({
 			url: "/people.json",
 			method: "GET",
 			dataType: "json",
 		}).done(function(response) {
+			debugger;
 			response.forEach(function(people_attr) {
+				debugger;
 				var person = new Person(people_attr)
 				var html = person.toHTML()
 				$('#summary').append(html);
