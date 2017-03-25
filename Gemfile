@@ -15,6 +15,11 @@ gem 'pg', '0.18.1', group: :production
 
 #rails12_factor gem for heroku upload
 gem 'rails_12factor', group: :production
+
+#active model serializer gem
+gem 'active_model_serializers', github: 'rails-api/active_model_serializers', branch: '0-9-stable'
+
+
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
