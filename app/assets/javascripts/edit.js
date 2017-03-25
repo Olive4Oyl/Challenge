@@ -7,7 +7,7 @@ $(function() {
 });
 
 function backButton(){
-	$(".backButton").on("click", ()=>{
-		window.location.href='/people';
-	})
+	$(".backButton").on("click", function(){
+		history.go(-1);
+	});
 }
