@@ -33,13 +33,7 @@ class PeopleController < ApplicationController
 	end
 
 	def edit
-		binding.pry
-	    if @people.valid?
-			@people.save
-			redirect_to people_path
-		else
-			render :edit
-		end
+	
 	end
 
 	def update
