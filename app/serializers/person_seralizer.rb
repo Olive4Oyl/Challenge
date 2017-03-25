@@ -1,4 +1,4 @@
-class PersonSerializer < ActiveModel::Serializer
+class PeopleSerializer < ActiveModel::Serializer
 	attributes :id, :name, :favoriteCity
 
 end
