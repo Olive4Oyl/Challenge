@@ -7,3 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Person.create(id: 1, name: "Sean", favoriteCity: "New York")
+Person.create(id: 2, name: "Miguel", favoriteCity: "San Francisco")
+Person.create(id: 3, name: "Risse", favoriteCity: "Port of Spain")
+Person.create(id: 4, name: "Hanoka", favoriteCity: "Sapporo")

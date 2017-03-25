@@ -1,0 +1,41 @@
+<div class="ui message" id="ui_message">
+<p class="title"><strong>Contacts App</strong></p>
+
+<p class="title">The app that allows you to keep tracking of a person’s/contact’s favorite city. A user can add as many contacts/people and can edit and view an individual contact’s/person’s profile.</p>
+
+<input type="button" value="Contacts App" class="fluid ui green button appButton" />
+	
+
+<p>The user can add a new contact by clicking on Add Contact or icon. This will make a get request to /people/new and direct the user to the form used to create a new contact.</p>
+
+<p>The user is able to enter in a contact’s name and favorite city into the appropriate fields. </p>
+
+<p> The user is able to either add this new contact or return to the contact index /people by using the back button without adding the new contact. </p>
+
+<p> The add button makes a post request to the create action making a new person object with the entered in values/params and the user will be redirected to the contact index page where the newest person can be viewed along with the already existing contacts. </p>
+
+<p> The user is able to edit a contact by clicking on edit. This makes a get request to /people/:id/edit, which redirects the user to the form to edit this specific contact. Once the user has entered in the information, clicking the update button makes a patch request to the route /people/:id and updates the attributes and returns to the contact index page. Again the user is given the option to return to the contact index page should the user decide not to update the information. </p>
+
+<p> Finally the user is able to delete a contact by clicking on profile under the contact’s information on the contact index page. This redirects the user to /people/:id where the user can either delete the contact or return to the index page should the user decide not to delete the information. </p>
+
+<p> The delete button makes a delete request to /people/:id and deletes this person from the database. </p>
+
+
+<p class="title"><strong>Contacts API</strong></p>
+
+<p class="title">This project provides a JSON API interface view below. This is the request to the API. </p>
+
+<p>GET /people -  This route shows a list of all the People/Contacts that the user has added</p>
+
+<p> Returns response: </p>
+
+<code> [{"id":1,"name":"Sean","favoriteCity":"NewYork","created_at":"2017-03-25T17:34:29.677Z","updated_at":"2017-03-25T17:34:38.425Z"},
+{"id":2,"name":"Miguel","favoriteCity":"SanFrancisco","created_at":"2017-03-25T18:42:36.200Z","updated_at":"2017-03-25T18:42:36.200Z"}] </code>
+
+<p> GET /people/:id - This route shows an individual Person/Contact </p>
+
+<p> Returns response: </p>
+
+<code> [{"id":1,"name":"Sean","favoriteCity":"Brooklyn","created_at":"2017-03-25T17:34:29.677Z","updated_at":"2017-03-25T17:34:38.425Z"},] </code> 
+
+</div>

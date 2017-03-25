@@ -3,7 +3,6 @@ class PeopleController < ApplicationController
 
 	def index
 		@people = Person.all 
-	
 		respond_to do |format|
 			format.html { render :index }
 			format.json { render json: @people }
@@ -17,7 +16,6 @@ class PeopleController < ApplicationController
 	def create
 		@people = Person.new(people_params)
 		if @people.valid?
-			binding.pry
 			@people.save
 			redirect_to people_path
 		else
