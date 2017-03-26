@@ -2,7 +2,7 @@ class PeopleController < ApplicationController
 	before_action :set_people
 
 	def index
-		@people = Person.all 
+		@people = Person.all.oldest 
 		respond_to do |format|
 			format.html { render :index }
 			format.json { render json: @people }
@@ -40,14 +40,13 @@ class PeopleController < ApplicationController
 		if @people.update(people_params)
         	redirect_to people_path
       	else
-        	@errors = @people.errors.full_messages
       		render :edit
       	end
 	end
 
 	def destroy
 		@people.delete
- 		redirect_to people_path, notice: 'Your contact has been deleted.'
+ 		redirect_to people_path
 	end
 
 	private 

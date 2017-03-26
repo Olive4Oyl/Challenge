@@ -22,6 +22,7 @@ function newPeople() {
 	}
 }
 
+
 function Person(attr) {
   this.id = attr.id;
   this.name = attr.name;
@@ -43,8 +44,6 @@ Person.prototype.toHTML = function(){
     Edit + "</br>" + Profile,
   ].join("")
 }
-
-
 
 
 
