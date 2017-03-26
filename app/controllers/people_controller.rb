@@ -2,10 +2,10 @@ class PeopleController < ApplicationController
 	before_action :set_people
 
 	def index
-		@people = Person.all.oldest 
+		@people = Person.all
 		respond_to do |format|
 			format.html { render :index }
-			format.json { render json: @people }
+			format.json { render json: @people.oldest }
 		end
 	end
 
