@@ -5,7 +5,7 @@ class PeopleController < ApplicationController
 		@people = Person.all
 		respond_to do |format|
 			format.html { render :index }
-			format.json { render json: @people.oldest }
+			format.json { render json: @people }
 		end
 	end
 
